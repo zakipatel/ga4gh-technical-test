@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+{% block body %}
+
+        <div class="login-screen">
+
+                <h3>Query Results</h1>
+                <h4>User Input</h4>
+                <p>  {{user_input}}</p>
+                <h4>API Response Status:</h4>
+                <p> {{status}}</hp>
+                <h4>Metadata:</h4>
+                <ul>
+                        <li> SEQUENCE ID :   {{id}} </li>
+                        <li> MD5         :   {{md5}} </li>
+                        <li> TRUNC 512   :   {{trunc512}}</li>
+                        <li> LENGTH      :   {{length}} </li>
+                        <li> ALIASES     :   {{aliases}} </li>
+                </ul>
+        <a href="http://localhost:5000">Go back</a>
+        </div>
+
+{% endblock %}
+
+

@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+{% block body %}
+
+<form action="/query" method="GET">
+        <div class="login">
+                <div class="login-screen">
+                        <div class="app-title">
+                                <h1>Enter a Sequence ID</h1>
+                        </div>
+
+                        <div class="login-form">
+                                <div class="control-group">
+                                <input type="text" class="login-field" value="" placeholder="enter a sequence id" name="sequence_id">
+                                </div>
+
+                <input type="submit" value="Query Meta-data Endpoint" class="btn btn-primary btn-large btn-block" >
+                            <br>
+                        </div>
+                </div>
+        <p> Message : {{message}} </p>
+        </div>
+
+</form>
+
+
+
+{% endblock %}
