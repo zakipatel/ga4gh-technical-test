@@ -15,9 +15,14 @@ $git clone the repository
 $cd into the cloned repo
 $ virtualenv venv
 will create a venv folder
-$pip install requirements
 
-using Flask http://flask.pocoo.org/docs/1.0/quickstart/
+now activate the venv
+$source venv/bin/activate
+
+then, in the venv
+(venv)$pip install requirements
+
+i am using Flask http://flask.pocoo.org/docs/1.0/quickstart/
 $ export FLASK_APP=hello.py
 
 $flask run 
