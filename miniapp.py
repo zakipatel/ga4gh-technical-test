@@ -38,9 +38,6 @@ def getSequence():
 			return render_template('query_form.html', **locals())
 
 if __name__ == "__main__":
-        try:
-		app.run()
-	except requests.exceptions as err:
-		print("error: " + err)
+	app.run()
 
 
