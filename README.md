@@ -18,11 +18,17 @@
 - For example,use :  3050107579885e1608e6fe50fae3f8d0 OR 6681ac2f62509cfc220d78751b8dc524
 
 <hr> 
+
 ### If you are using a virtual environment, follow steps below: 
+
 `$ pip install virtualenv`
+
 `$ virtualenv --version`
+
 `$git clone the_repository`
+
 `$cd into the cloned repo`
+
 `$ virtualenv venv`
 
 #### Next, activate the venv
@@ -30,7 +36,9 @@
 
 #### Then:
 `(venv)$pip install requirements`
+
 `(venv)$export FLASK_APP=hello.py`
+
 `(venv)$flask run` 
 
 ### Now, open a browser
