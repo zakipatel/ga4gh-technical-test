@@ -1,9 +1,8 @@
 # READ ME - Command-line client
 
 
-#### Test your installation
-`$python --version`
-Python 3.7.0
+#### Test your installation for python version
+`$python --version`  # Python 3.7.0
 
 #### Install dependencies: 
 `$pip3 install requests`
