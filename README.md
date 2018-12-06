@@ -1,53 +1,39 @@
-# literate-waffle
+# READ ME - Flask MiniApp Client 
 
+### Check version of Python
+`$python --version`
 
-###First, make sure you are using  python3
+### Next, install the dependencies i.e. requests, flask
+`$pip install requirements`
 
-$python --version
+### Then, set the following: 
+`$export FLASK_APP=miniapp.py`
 
-To make python3 the default, set alias python='python3' in bash profile
+### And finally: 
+`$flask run`
 
+### Open a browser
+- Go to http://127.0.0.1:5000 
+- Enter a sequence ID, run the query, view the meta-data. 
+- For example,use :  3050107579885e1608e6fe50fae3f8d0 OR 6681ac2f62509cfc220d78751b8dc524
 
-###Next, install the dependencies i.e. requests, flask
-$pip install requirements
-
-###Followed by: 
-$export FLASK_APP=miniapp.py
-
-
-###And then: 
-$flask run 
-
-Go to http://127.0.0.1:5000 
-Enter a sequence ID, run the query, view the meta-data. 
-For example,use :  3050107579885e1608e6fe50fae3f8d0 OR 6681ac2f62509cfc220d78751b8dc524
-
-
-
-###If you are using a virtual environment, follow steps below: 
-
-For details, see: https://docs.python-guide.org/dev/virtualenvs/#virtualenvironments-ref
-
-####
-$ pip install virtualenv
-$ virtualenv --version
-Tested on 16.0.6
-
-####
-$git clone the_repository
-$cd into the cloned repo
-$ virtualenv venv
-will create a venv folder
+<hr> 
+### If you are using a virtual environment, follow steps below: 
+`$ pip install virtualenv`
+`$ virtualenv --version`
+`$git clone the_repository`
+`$cd into the cloned repo`
+`$ virtualenv venv`
 
 #### Next, activate the venv
-$source venv/bin/activate
+`$source venv/bin/activate`
 
-### Then:
-(venv)$pip install requirements
-(venv)$export FLASK_APP=hello.py
-(venv)$flask run 
+#### Then:
+`(venv)$pip install requirements`
+`(venv)$export FLASK_APP=hello.py`
+`(venv)$flask run` 
 
-Go to 127.0.0.1:5000 will load up a form 
-Enter a sequence ID, run the query, view the meta-data. 
-
-
+### Now, open a browser
+- Go to http://127.0.0.1:5000 
+- Enter a sequence ID, run the query, view the meta-data. 
+- For example,use :  3050107579885e1608e6fe50fae3f8d0 OR 6681ac2f62509cfc220d78751b8dc524
