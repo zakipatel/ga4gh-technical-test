@@ -37,10 +37,7 @@ def getSequence():
                		message = 'Error Code:  ' + str(r.status_code) + ' ..... Unknown sequence MD5 checksum. Please try another ID '
 			return render_template('query_form.html', **locals())
 
-		print (".....ERROR.... " + err)
-
-
-if __name__ == "__main__main":
+if __name__ == "__main__":
         try:
 		app.run()
 	except requests.exceptions as err:
