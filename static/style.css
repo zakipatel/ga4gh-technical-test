@@ -6,30 +6,32 @@ box-sizing: border-box;
         outline: none;
 }
 body {
-font-family: Arial;
-background-color: #3498DB;
-padding: 50px;
+	font-family: Arial;
+	background-color: #3498DB;
+	padding: 50px;
 }
+
 .login {
-margin: 20px auto;
-width: 300px;
+	margin: 20px auto;
+	width: 300px;
 }
+
 .login-screen {
-background-color: #FFF;
-padding: 20px;
-border-radius: 5px
+	background-color: #FFF;
+	padding: 20px;
+	border-radius: 5px
 }
 
 .app-title {
-text-align: center;
-color: #777;
+	text-align: center;
+	color: #777;
 }
 
-.login-form {
-text-align: center;
+.input-form {
+	text-align: center;
 }
 .control-group {
-margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 input {

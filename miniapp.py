@@ -17,24 +17,33 @@ def index():
 
 @app.route("/query") # /<string:sequence_id>/")
 def getSequence():
-        user_input = request.args.get('sequence_id')
-	r = requests.get("https://www.ebi.ac.uk/ena/cram/sequence/" + user_input + "/metadata")
-        if (r.status_code == 200):
-                response_data = r.json()
-                status = 'success'
-                id = response_data["metadata"]["id"]
-                md5 = response_data["metadata"]["md5"]
-                length = response_data["metadata"]["length"]
-                trunc512 = response_data["metadata"]["trunc512"]
-                aliases = response_data["metadata"]["aliases"]
-                #return_string = "Metadata for Sequence ID: " + id + " ... \n LENGTH is: " + str(length)
-                #return return_string
-                return render_template('results.html', **locals())
-        else:
-                message = 'Error Code:  ' + str(r.status_code) + ' \n...  Did not find metadata for input ID'
+	user_input = request.args.get('sequence_id')
+	if user_input == '':
+		message = 'Please enter an input sequence ID'	
 		return render_template('query_form.html', **locals())
+	else:
+		r = requests.get("https://www.ebi.ac.uk/ena/cram/sequence/" + user_input + "/metadata")
+       		#r.raise_for_status()
+		if (r.status_code == 200):
+               		response_data = r.json()
+               		status = 'Status Code: ' + str(r.status_code)
+               		id = response_data["metadata"]["id"]
+             		md5 = response_data["metadata"]["md5"]
+               		length = response_data["metadata"]["length"]
+                	trunc512 = response_data["metadata"]["trunc512"]
+               		aliases = response_data["metadata"]["aliases"]
+               		return render_template('results.html', **locals())
+       		else:
+               		message = 'Error Code:  ' + str(r.status_code) + ' ..... Unknown sequence MD5 checksum. Please try another ID '
+			return render_template('query_form.html', **locals())
+
+		print (".....ERROR.... " + err)
+
 
 if __name__ == "__main__main":
-        app.run()
+        try:
+		app.run()
+	except requests.exceptions as err:
+		print("error: " + err)
 
 
